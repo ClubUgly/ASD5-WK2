@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contact2>
+		<item>
+				<fname>Jay Williams</fname>
+				<email>jay@fullsail.edu</email>
+				<url>http://clubugly.com</url>
+				<sex>Male</sex>
+				<groups>Barack Obama</groups>
+				<borndate>1969-12-08</borndate>
+				<quantity>12</quantity>
+				<comments>You got my vote!</comments>
+				<terms>Yes</terms>
+		</item>	
+		<item>
+				<fname>Alvin Williams</fname>
+				<email>alvin@gmail.com</email>
+				<url>http://google.com</url>
+				<sex>Male</sex>
+				<groups>Ron Paul</groups>
+				<borndate>1976-07-06</borndate>
+				<quantity>6</quantity>
+				<comments>Can I get a mug!</comments>
+				<terms>Yes</terms>
+		</item>	
+		<item>
+				<fname>Calvin Williams</fname>
+				<email>calvin@gmail.com</email>
+				<url>http://google.com</url>
+				<sex>Male</sex>
+				<groups>Mitt Romney</groups>
+				<borndate>1980-07-06</borndate>
+				<quantity>6</quantity>
+				<comments>Button Please!</comments>
+				<terms>Yes</terms>
+		</item>	
+									
+</contact2>			
