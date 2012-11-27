@@ -3,6 +3,36 @@
     //ASD WK 2
     //Cast My Vote
 
+//JSON DATA
+$(function(){
+	$('#myxhr').empty();
+	$.ajax({
+		url:	'xhr/data.json',
+		type: 'GET',
+		dataType:	'json',
+		success: function(response){
+			for(var i=0, j=response.contact1.length; i<j; i++){
+				var cont = response.contact1[i];
+				$(''+
+					'<div class="contact">'+
+						'<p>'+ 'Name: ' + cont.fname +'</p>'+
+						'<p>'+ 'Email: ' + cont.email +'</p>'+
+						'<p>'+ 'Website: ' + cont.url +'</p>'+
+						'<p>'+ 'Gender: ' + cont.sex +'</p>'+
+						'<p>'+ 'Candidate Selection: ' + cont.groups +'</p>'+
+						'<p>'+ 'Date of Birth: ' + cont.borndate +'</p>'+
+						'<p>'+ 'Number of persons in household: ' + cont.quantity +'</p>'+
+						'<p>'+ 'Additional Info: ' + cont.comments +'</p>'+
+						'<p>'+ 'Agree to terms: ' + cont.terms +'</p>'+'<hr />'+
+					'</div>'
+				).appendTo('#myxhr');
+				console.log(response);
+			};
+		}
+	});
+
+});
+//JSON DATA END
 
 // Wait until the DOM is ready.
 $('#myorder').on('pageinit', function () {
