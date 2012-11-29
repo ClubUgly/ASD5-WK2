@@ -76,6 +76,55 @@ $(function(){
 });
 //XML DATA END
 
+//CSV DATA
+$(function(){
+	$('#myxhr3').empty();
+	$.ajax({
+		url:	'xhr/data.csv',
+		type: 'GET',
+		dataType:	'text',
+        success: function(data) {       
+         		var allTextLines = data.split(/\r\n|\n/);
+     			var headers = allTextLines[0].split(',');
+     			var lines = [];
+
+
+					for (var i=1; i<allTextLines.length; i++) {
+						var data = allTextLines[i].split(',');
+						if (data.length == headers.length) {
+							var votes = [];
+							
+							for (var j=0; j<headers.length; j++) {
+									votes.push(data[j]); //puts each voter into the array.
+							}
+							lines.push(votes); // puts the voter array into the main array.
+						}
+
+					}
+					for (var v=0; v<lines.length; v++){
+							var avote = lines[v];
+					$(''+
+								'<div class="contact">'+
+								'<p>'+ 'Name: ' + avote[0] +'</p>'+
+								'<p>'+ 'Email: ' + avote[1] +'</p>'+
+								'<p>'+ 'Website: ' + avote[2] +'</p>'+
+								'<p>'+ 'Gender: ' + avote[3] +'</p>'+
+								'<p>'+ 'Candidate Selection: ' + avote[4] +'</p>'+
+								'<p>'+ 'Date of Birth: ' + avote[5] +'</p>'+
+								'<p>'+ 'Number of persons in household: ' + avote[6] +'</p>'+
+								'<p>'+ 'Additional Info: ' + avote[7] +'</p>'+
+								'<p>'+ 'Agree to terms: ' + avote[8] +'</p>'+
+								'</div><hr />'
+							).appendTo('#myxhr3');
+					console.log(lines);	
+					}						
+							
+			}
+		});
+
+});
+//CSV DATA END
+
 // Wait until the DOM is ready.
 $('#myorder').on('pageinit', function () {
 	console.log("Home Page loaded.");
