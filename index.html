@@ -1219,7 +1219,7 @@
 		</div>
 	</div>	
 
-<!--json data test to see if I can work offline from github save-->
+<!--json data-->
 	<div data-role="page" id="myjsondata" data-add-back-btn="true">
 	
 		<div data-role="header" data-position="fixed" data-theme="b">
@@ -1260,7 +1260,54 @@
 		</div>			
 	</div>
 <!--json data end-->
-												
+
+<!--Data Page Start-->
+	<div data-role="page" id="datapage">
+	
+		<div data-role="header" data-position="fixed" data-theme="b">
+		<center><a href="#home"><img src="images/fl-logo.png" alt="logo" /></center></a>
+		</div>	
+		<br />
+		<a href="#tulip"><center><img src="images/cta2.png" alt="cta" width="320" height="148" /></center></a>
+		
+		<div data-role="content">
+			<ul data-role="listview"  data-filter="true" data-inset="true">
+				<li><a href="#myjsondata">
+					<h3>json Data</h3>
+					<p>View my json Data.</p>
+				</a></li>
+				
+				<li><a href="#xmldata">
+					<h3>XML Data</h3>
+					<p>View my XML Data.</p>
+				</a></li>
+				
+				<li><a href="#csvdata">
+					<h3>CSV Data</h3>
+					<p>View my CSV Data.</p>
+				</a></li>				
+			</ul> 			
+		</div> 
+		
+		<div data-role="footer" data-position="fixed" data-id="datapage" data-theme="b">
+			<div data-role="navbar">
+			
+				<ul>
+				
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="#GitHub" data-icon="gear">GitHub</a></li>
+					<li><a href="#datapage" data-icon="gear" class="ui-btn-active">Data</a></li>
+					<li><a href="#search" data-icon="search">Search</a></li>
+					<li><a href="#myorder" data-icon="grid">Vote</a></li>
+				
+				</ul>
+			
+			</div>
+		</div>
+				
+	</div>
+<!--Data Page End-->	
+													
 	<!-- JavaScript under here -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
