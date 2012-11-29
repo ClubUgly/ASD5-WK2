@@ -34,6 +34,48 @@ $(function(){
 });
 //JSON DATA END
 
+//XML DATA
+$(function(){
+	$('#myxhr2').empty();	
+	$.ajax({
+		url:	'xhr/data.xml',
+		type: 'GET',
+		dataType:	'xml',
+		success: function(xml){			
+				$(xml).find("item").each(function(){
+    				var fname = $(this).find('fname').text();
+    				var email = $(this).find('email').text();
+    				var url = $(this).find('url').text();
+    				var sex = $(this).find('sex').text();
+    				var groups = $(this).find('groups').text();
+    				var borndate = $(this).find('borndate').text();
+    				var quantity = $(this).find('quantity').text();
+    				var comments = $(this).find('comments').text();
+    				var terms = $(this).find('terms').text();
+    				
+    			 $(''+
+						'<div class="contact">'+
+							'<p>'+ 'Name: ' + fname +'</p>'+
+							'<p>'+ 'Email: '+ email +'</p>'+
+							'<p>'+ 'Website: '+ url +'</p>'+
+							'<p>'+ 'Gender: ' + sex +'</p>'+
+							'<p>'+ 'Candidate Selection: ' + groups +'</p>'+
+							'<p>'+ 'Date of Birth: ' + borndate +'</p>'+
+							'<p>'+ 'Number of persons in household: ' + quantity +'</p>'+
+							'<p>'+ 'Additional Info: ' + comments +'</p>'+
+							'<p>'+ 'Agree to terms: ' + terms +'</p>'+
+						'</div><hr />'		
+				).appendTo('#myxhr2');
+				console.log(xml);
+				
+			
+				});
+			}
+	});
+
+});
+//XML DATA END
+
 // Wait until the DOM is ready.
 $('#myorder').on('pageinit', function () {
 	console.log("Home Page loaded.");
