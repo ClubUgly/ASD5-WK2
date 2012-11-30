@@ -364,21 +364,21 @@ $('#myorder').on('pageinit', function () {
 	
 	
 	var validate = function(){
-		console.log('test')
-		var myForm = $('#myorder');
-	//		myerrorslink = $('#myerrorslink');
+		console.log('validate function running')
+		var myForm = $('#myorderform');
+			//myerrorslink = $('#myerrorslink');
 	
 	myForm.validate({
 		invalidHandler: function(form, validator){},
-			//myerrorslink.click();
-		//	var html = '';
-		//	for(var key in validator.submitted){
-		//		var label = $('label[for^="'+ key +'"]').not('[generated]');
-		//		var legend = label.closest('fieldset').find('.ui-controlgroup-label');
-		//		var fieldName = legend.length ? legend.text() : label.text();
-		//		html += '<li>' + fieldName +'</li>';
-		//	};
-		//	$('#ordererrors ul').html(html);
+			//myerrorslink:click(),
+			//var html = ''});
+			//for(var key in validator.submitted){
+			//	var label = $('label[for^="'+ key +'"]').not('[generated]');
+			//	var legend = label.closest('fieldset').find('.ui-controlgroup-label');
+			//	var fieldName = legend.length ? legend.text() : label.text();
+			//	html += '<li>' + fieldName +'</li>';
+			//};
+			//$('#ordererrors ul').html(html);
 		
 		submitHandler: function(){
 			var data = myForm.serializeArray();
