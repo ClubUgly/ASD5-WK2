@@ -4,14 +4,14 @@
     //Cast My Vote
 
 //JSON DATA
-$(function(){
+$(function () {
 	$('#myxhr').empty();
 	$.ajax({
 		url:	'xhr/data.json',
 		type: 'GET',
 		dataType:	'json',
-		success: function(response){
-			for(var i=0, j=response.contact1.length; i<j; i++){
+		success: function (response) {
+			for (var i=0, j=response.contact1.length; i<j; i++){
 				var cont = response.contact1[i];
 				$(''+
 					'<div class="contact">'+
@@ -364,7 +364,7 @@ $('#myorder').on('pageinit', function () {
 	
 	
 	var validate = function(){
-		console.log('validate function running')
+		console.log('validate function running');
 		var myForm = $('#myorderform');
 			//myerrorslink = $('#myerrorslink');
 	
