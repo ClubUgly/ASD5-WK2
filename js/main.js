@@ -407,6 +407,6 @@ var parseMyOrder = function(data){
 };
 
 $(document).ready(function(){
-
+	console.log( 'Page ready!' );
 
 });
